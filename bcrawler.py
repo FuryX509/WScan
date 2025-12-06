@@ -39,7 +39,7 @@ fmt= '[%(levelname)s] %(asctime)s - %(message)s'
 logging.basicConfig(filename='spam.log', level=level, format=fmt)
 
 dbuser='root'
-dbpassword='123456'
+dbpassword=''
 dbhost='127.0.0.1'
 dbdatabase='mantis'
 
@@ -600,4 +600,5 @@ if __name__ == '__main__':
     parser.add_argument("-t", "--token", help = "User token")
     #parser.add_argument("-o", "--output", help = "Save results to file")
     args = parser.parse_args()
+
     startConfig(args.domain, args.token)
