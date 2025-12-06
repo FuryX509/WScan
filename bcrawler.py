@@ -339,7 +339,7 @@ class Crawler:
             headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0' , 'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8','cookie' : self.new_headers}
             response = requests.get(url,headers=headers)
             if isinstance(response, str):
-                print("❌ Request error:", response)
+                print(" Request error:", response)
                 return
             if self.requestCount < 5:
                 result = analyze_security_headers(response.headers)
@@ -602,3 +602,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     startConfig(args.domain, args.token)
+
