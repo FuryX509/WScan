@@ -5,7 +5,7 @@ import mysql.connector
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': '123456',
+    'password': '',
     'database': 'mantis'
 }
 
@@ -42,3 +42,4 @@ def receive_data():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8282, debug=True)
+
